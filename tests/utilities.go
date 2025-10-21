@@ -1,9 +1,9 @@
 package test
 
-import "io/ioutil"
+import "os"
 
 func getFileAsString(fileName string) (string, error) {
-	content, err := ioutil.ReadFile(fileName)
+	content, err := os.ReadFile(fileName)
 	if err != nil {
 		return "", err
 	}

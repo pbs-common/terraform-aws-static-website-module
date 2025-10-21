@@ -10,6 +10,7 @@ module "static_website" {
   environment  = var.environment
   product      = var.product
   repo         = var.repo
+  owner        = var.owner
 }
 
 resource "aws_s3_object" "object" {
