@@ -1,5 +1,5 @@
 module "s3" {
-  source = "github.com/pbs/terraform-aws-s3-module?ref=4.0.11"
+  source = "github.com/pbs-common/terraform-aws-s3-module?ref=5.0.0"
 
   name         = var.bucket_name
   use_prefix   = var.use_prefix
@@ -28,10 +28,11 @@ module "s3" {
   environment  = var.environment
   product      = var.product
   repo         = var.repo
+  owner        = var.owner
 }
 
 module "cloudfront" {
-  source = "github.com/pbs/terraform-aws-cloudfront-module?ref=3.1.17"
+  source = "github.com/pbs-common/terraform-aws-cloudfront-module?ref=4.0.0"
 
   name    = local.name
   comment = var.comment
@@ -101,11 +102,12 @@ module "cloudfront" {
   environment  = var.environment
   product      = var.product
   repo         = var.repo
+  owner        = var.owner
   tags         = var.tags
 }
 
 module "s3_policy" {
-  source = "github.com/pbs/terraform-aws-s3-bucket-policy-module?ref=1.0.21"
+  source = "github.com/pbs-common/terraform-aws-s3-bucket-policy-module?ref=2.0.0"
 
   name = module.s3.name
   cloudfront_oac_access_statements = [{

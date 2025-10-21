@@ -7,7 +7,7 @@
 Use this URL for the source of the module. See the usage examples below for more details.
 
 ```hcl
-github.com/pbs/terraform-aws-static-website-module?ref=x.y.z
+github.com/pbs-common/terraform-aws-static-website-module?ref=x.y.z
 ```
 
 ### Alternative Installation Methods
@@ -22,7 +22,7 @@ Integrate this module like so:
 
 ```hcl
 module "static_website" {
-  source = "github.com/pbs/terraform-aws-static-website-module?ref=x.y.z"
+  source = "github.com/pbs-common/terraform-aws-static-website-module?ref=x.y.z"
 
   # Tagging Parameters
   organization = var.organization
