@@ -195,7 +195,7 @@ variable "default_cache_policy_id" {
 
 variable "default_cache_policy_name" {
   description = "(optional) policy name for the cache policy of the default cache behavior"
-  default     = "Managed-CachingDisabled"
+  default     = "Managed-CachingOptimized"
   type        = string
 }
 
