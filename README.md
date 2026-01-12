@@ -7,7 +7,7 @@
 Use this URL for the source of the module. See the usage examples below for more details.
 
 ```hcl
-github.com/pbs-common/terraform-aws-static-website-module?ref=7.0.0
+github.com/pbs-common/terraform-aws-static-website-module?ref=x.y.z
 ```
 
 ### Alternative Installation Methods
@@ -22,7 +22,7 @@ Integrate this module like so:
 
 ```hcl
 module "static_website" {
-  source = "github.com/pbs-common/terraform-aws-static-website-module?ref=7.0.0"
+  source = "github.com/pbs-common/terraform-aws-static-website-module?ref=x.y.z"
 
   # Tagging Parameters
   organization = var.organization
@@ -38,7 +38,7 @@ module "static_website" {
 
 If this repo is added as a subtree, then the version of the module should be close to the version shown here:
 
-`7.0.0`
+`x.y.z`
 
 Note, however that subtrees can be altered as desired within repositories.
 
@@ -103,7 +103,7 @@ No resources.
 | <a name="input_default_behavior_function_association"></a> [default\_behavior\_function\_association](#input\_default\_behavior\_function\_association) | (optional) default behavior function association | <pre>object({<br/>    event_type   = string<br/>    function_arn = string<br/>  })</pre> | `null` | no |
 | <a name="input_default_behavior_lambda_function_association"></a> [default\_behavior\_lambda\_function\_association](#input\_default\_behavior\_lambda\_function\_association) | (optional) default behavior lambda function association | <pre>object({<br/>    event_type   = string<br/>    lambda_arn   = string<br/>    include_body = optional(bool)<br/>  })</pre> | `null` | no |
 | <a name="input_default_cache_policy_id"></a> [default\_cache\_policy\_id](#input\_default\_cache\_policy\_id) | (optional) policy id for the cache policy of the default cache behavior. If null, a lookup on default\_cache\_policy\_name will be attempted. | `string` | `null` | no |
-| <a name="input_default_cache_policy_name"></a> [default\_cache\_policy\_name](#input\_default\_cache\_policy\_name) | (optional) policy name for the cache policy of the default cache behavior | `string` | `"Managed-CachingDisabled"` | no |
+| <a name="input_default_cache_policy_name"></a> [default\_cache\_policy\_name](#input\_default\_cache\_policy\_name) | (optional) policy name for the cache policy of the default cache behavior | `string` | `"Managed-CachingOptimized"` | no |
 | <a name="input_default_origin_id"></a> [default\_origin\_id](#input\_default\_origin\_id) | (optional) default origin origin id | `string` | `null` | no |
 | <a name="input_default_origin_request_policy_id"></a> [default\_origin\_request\_policy\_id](#input\_default\_origin\_request\_policy\_id) | (optional) policy id for the origin request policy of the default cache behavior. If null, a lookup on default\_origin\_request\_policy\_name will be attempted. | `string` | `null` | no |
 | <a name="input_default_origin_request_policy_name"></a> [default\_origin\_request\_policy\_name](#input\_default\_origin\_request\_policy\_name) | (optional) policy name for the origin request policy of the default cache behavior | `string` | `null` | no |
