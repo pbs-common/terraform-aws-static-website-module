@@ -1,5 +1,5 @@
 module "s3" {
-  source = "github.com/pbs-common/terraform-aws-s3-module?ref=5.0.0"
+  source = "github.com/pbs-common/terraform-aws-s3-module?ref=5.0.1"
 
   name         = var.bucket_name
   use_prefix   = var.use_prefix
